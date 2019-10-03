@@ -72,10 +72,8 @@ public class MainActivity extends Activity implements ESenseConnectionListener, 
         Log.d("ESENSE y",String.valueOf(val[1]));
         Log.d("ESENSE z",String.valueOf(val[2]));
         if(flag == 1){
-            //Log.d("ESENSE","start button clicked");
             progress_time = System.currentTimeMillis() - startTime;
             outputCsv.write( String.valueOf(val[0])+ "," + String.valueOf(val[1])+ "," +String.valueOf(val[2])+ "," +String.valueOf(progress_time));
-            //outputCsv.write("afjkla");
             //textView.setText("x = " + String.valueOf(val[0]) + "\n" + "y = " + String.valueOf(val[1])+ "\n" + "z = " + String.valueOf(val[2]) + "\n" + "経過時間(ミリ秒):" + String.valueOf(progress_time));
             textView.setText("計測開始");
         }
